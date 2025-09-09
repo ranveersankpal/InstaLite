@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="/editStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-title">✏️ Edit Your Post</h2>
+        
+        <div class="edit-card">
+            <!-- Post Info -->
+            <div class="edit-info">
+                <p><strong>Id:</strong> <%= post.id %></p>
+                <p><strong>Username:</strong> <%= post.username %></p>
+                <p><strong>❤️ Likes:</strong> <%= post.likes %></p>
+                <p><strong>💬 Comments:</strong> <%= post.comments %></p>
+            </div>
+
+            <!-- Form -->
+            <form method="post" action="/posts/<%=post.id%>?_method=PATCH" class="edit-form">
+                <label for="caption">Caption:</label>
+                <textarea name="caption" id="caption" rows="6"><%= post.caption %></textarea>
+                <button type="submit" class="btn-submit">💾 Save Changes</button>
+            </form>
+
+            <!-- Post Image -->
+            <div class="edit-image">
+                <img src="<%= post.image %>" alt="Post Image" class="post-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

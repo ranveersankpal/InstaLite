@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Post</title>
+  <link rel="stylesheet" href="/newStyle.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>➕ Create New Post</h2>
+    <form action="/posts" method="post">
+      <input type="text" name="username" placeholder="👤 Enter Username" required>
+      <input type="text" name="image" placeholder="📸 Image Link" required>
+      <input type="text" name="likes" placeholder="❤️ Likes" required>
+      <input type="text" name="comments" placeholder="💬 Comments" required>
+      <input type="text" name="caption" placeholder="📝 Caption" required>
+      <button type="submit">Post</button>
+    </form>
+  </div>
+</body>
+</html>

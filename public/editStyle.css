@@ -1,0 +1,82 @@
+/* Edit Post Styles */
+.edit-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.edit-info p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #555;
+}
+
+.edit-info strong {
+    color: #222;
+}
+
+/* Form */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.edit-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.edit-form textarea:focus {
+    border: 1px solid #6a5acd;
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.3);
+}
+
+/* Button */
+.btn-submit {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6a5acd, #836fff);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #5a4dbd, #6a5acd);
+}
+
+/* Image */
+.edit-image {
+    text-align: center;
+}
+
+.edit-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    object-fit: cover;
+}

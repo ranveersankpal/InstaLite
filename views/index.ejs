@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>This are All Posts</h1>
+
+    <a href="/posts/new" style="font-size: 25px;" class="btn">Create New Post</a>
+
+    <div class="main">
+        <% for(post of posts) { %>
+            <div class="container">
+                <img src="<%= post.image%>" alt="" class="mainImage">
+                <p>Username : <%= post.username%></p>
+                <p>Likes : <%= post.likes%></p>
+                <p>Comments : <%= post.comments%></p>
+                <p>Caption : <%= post.caption%></p>
+                <a href="/posts/<%=post.id%>" >Details</a>
+                <a href="/posts/<%=post.id%>/edit" >Edit</a>
+
+                <form method="post" action="/posts/<%= post.id%>?_method=DELETE" style="display: inline-block;">
+                    <button>Delete</button>
+                </form>
+            </div>
+        <%}%>
+    </div>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>All Posts</h1>
+        <a href="/posts/new" class="btn create-btn">+ Create New Post</a>
+    </div>
+
+    <div class="main">
+        <% for(post of posts) { %>
+            <div class="container">
+                <img src="<%= post.image%>" alt="" class="mainImage">
+                <div class="card-body">
+                    <p><strong>Username:</strong> <%= post.username%></p>
+                    <p><strong>Likes:</strong> <%= post.likes%></p>
+                    <p><strong>Comments:</strong> <%= post.comments%></p>
+                    <p><strong>Caption:</strong> <%= post.caption%></p>
+
+                    <div class="actions">
+                        <a href="/posts/<%=post.id%>">Details</a>
+                        <a href="/posts/<%=post.id%>/edit">Edit</a>
+                        <form method="post" action="/posts/<%= post.id%>?_method=DELETE" style="display:inline-block;">
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Post</title>
+    <link rel="stylesheet" href="/viewStyle.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-title">📸 Your Post</h2>
+        <div class="post-card">
+            <div class="post-left">
+                <p><strong>Id:</strong> <%= post.id %></p>
+                <p><strong>Username:</strong> <%= post.username %></p>
+                <p><strong>❤️ Likes:</strong> <%= post.likes %></p>
+                <p><strong>💬 Comments:</strong> <%= post.comments %></p>
+                <p><strong>📝 Caption:</strong> <%= post.caption %></p>
+            </div>
+            <div class="post-right">
+                <img src="<%= post.image %>" alt="Post Image" class="post-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
